@@ -1,6 +1,6 @@
 % chapitre dédié au nuage
-\chapter*{Utiliser le nuage}
-\addcontentsline{toc}{chapter}{Utiliser le nuage}
+\chapter{Utiliser le nuage}
+%\addcontentsline{toc}{chapter}{Utiliser le nuage}
 
 Le ``Nuage'' est le nom qui a été donné à l'espace de stockage en ligne, actuellement d'une taille maximale de 100~Go\footnote{%
 100~Go = 100 milliards de caractères simples.
@@ -9,8 +9,8 @@ offrant en outre la présence d'une suite bureautique en ligne --libreoffice en 
 
 Le nuage est accessible de deux façons différentes pour l'instant --j'espère que la troisième fonctionnera aussi bientôt--~: \emph{via} l'interface web (firefox, chrome, edge, autres ...) et \emph{via} le client \emph{nextcloud}.
 
-\section*{L'interface Web}
-\addcontentsline{toc}{section}{L'interface web}
+\section{L'interface Web}
+%\addcontentsline{toc}{section}{L'interface web}
 
 L'interface web est celle qui sera sans doute la plus utilisée car dès que l'on est en établissement scolaire, peu importe les blocages ou les applications, la certitude de trouver un navigateur dans chaque ordinateur est quasi absolue.
 \begin{figure}
@@ -27,8 +27,8 @@ L'interface est visible en mode mosaïque également.
 L'intérêt de cette interface est de pouvoir y déposer ou récupérer un ou plusieurs fichiers, ou bien un ou plusieurs dossiers. 
 L'autre intérêt est que le site étant en ``education.fr'' il ne sera donc pas filtré par les systèmes de pare-feu académiques et évitera l'emploi de clés USB qui se promènent entre le domicile et l'établissement où les niveau de sécurité sont très différents.
 
-\section*{Le client NextCloud}
-\addcontentsline{toc}{section}{Le client nextcloud}
+\section{Le client NextCloud}
+%\addcontentsline{toc}{section}{Le client nextcloud}
 Le nuage de \emph{apps} est basé sur le travail d'un groupe important de développeurs et de développeuses qui ont fondé le site et le serveur ``Nextcloud''. 
 Ce service en ligne permet outre ce qui est offert par le nuage bien d'autres fonctionnalités. 
 
@@ -52,46 +52,67 @@ Ce service en ligne permet outre ce qui est offert par le nuage bien d'autres fo
 Comment fonctionne le client Nextcloud pour PC~? 
 C'est assez facile à comprendre. 
 Lors de son installation, le client va demander un dossier, soit par défaut, soit en le spécifiant et en le créant, afin que tout fichier ou tout dossier qui y sera créé, supprimé, modifié, renommé, déplacé ou copié, sera synchronisé également sur le serveur automatiquement.
-
-\begin{figure}
+\begin{figure} \label{fig-dossier-synchro}
 	\centering
 	\includegraphics{./Captures/nextcloud-client.dossier.synchronise.png}
 	\caption{Le dossier synchronisé sur mon P.C.}
 \end{figure}
 
+\section{Transfert de données}
+%\addcontentsline{toc}{section}{Transfert de données}
+Le transfert de fichiers et de dossiers entre périphériques est possible depuis plusieurs sources et selon plusieurs protocoles. 
+L'image qui suit montre une synchronisation à double sens en utilisant le logiciel sur P.C. --flèches en rose--, ou bien via le navigateur --flèches en bleu-- ou encore via l'application d'un smartphone ou d'une tablette --flèches en rouge.
+\begin{figure}
+	\centering
+	\includegraphics{./Captures/synchro.nextcloud.nuage.jpg}
+	\caption{Le nuage est accessible par l'outil Nextcloud, par le navigateur, ou par le client smartphone pour transférer des données dans les deux sens.}
+\end{figure}
 
-\section*{Transfert de données}
-\addcontentsline{toc}{section}{Transfert de données}
+\paragraph{La synchronisation via le client nextcloud pour ordinateur.} 
+Comme le montre la capture d'écran du paragraphe \ref{fig-dossier-synchro}, transférer des fichiers entre l'ordinateur personnel et le nuage revient simplement à copier ou déplacer fichiers ou dossiers vers le dossier synchronisé, en soi on peut supposer que cette compétence est acquise par chaque lecteur.
+
+Aussi dans les sous-sections suivantes ne seront abordés que le transfert de fichier par l'interface web.
+De plus j'utiliserai le terme ``monter'' en lieu et place de l'anglicisme \emph{upload} et ``descendre'' parfois au lieu de télécharger.
+
+\subsection{Monter un ou plusieurs fichiers}
+%\addcontentsline{toc}{subsection}{Monter un ou plusieurs fichiers}
+Tout se passe par l'icône en forme de rond avec une croix à l'intérieur, l'appui dessus affiche le menu de la capture suivante~:
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7071\linewidth]{./Captures/nuage.menu.plus.png}
+	\caption{Le menu ``plus''}
+\end{figure}
+En cliquant sur la ligne \og~Envoyer un fichier~\fg{} une fenêtre de l'explorateur local va s'ouvrir permettant de sélectionner un ou plusieurs fichiers qui seront envoyés dans le dossier affiché à l'écran.
+
+\subsection{Créer un dossier}
+%\addcontentsline{toc}{subsection}{Créer un dossier}
+En cliquant sur la deuxième ligne du menu déroulant, c'est la création d'un dossier dans le dossier courant, attention il faut penser à clique sur la flèche au bout de la ligne pour valider le nom et créer le dossier.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7071\linewidth]{./Captures/nuage.menu.plus.creer.dossier.png}
+	\caption{}
+\end{figure}
+
 
 bla lbla
 
-\subsection*{Monter un ou plusieurs fichiers}
-\addcontentsline{toc}{subsection}{Monter un ou plusieurs fichiers}
+\subsection{Descendre un dossier ou plusieurs fichiers}
+%\addcontentsline{toc}{subsection}{Descendre un dossier ou plusieurs fichiers}
 
 bla lbla
 
-\subsection*{Créer un dossier}
-\addcontentsline{toc}{subsection}{Créer un dossier}
+\subsection{Ce qu'il n'est pas possible de faire}
+%\addcontentsline{toc}{subsection}{Ce qu'il n'est pas possible de faire} 
 
 bla lbla
 
-\subsection*{Descendre un dossier ou plusieurs fichiers}
-\addcontentsline{toc}{subsection}{Descendre un dossier ou plusieurs fichiers}
-
-bla lbla
-
-\subsection*{Ce qu'il n'est pas possible de faire}
-\addcontentsline{toc}{subsection}{Ce qu'il n'est pas possible de faire} 
-
-bla lbla
-
-\section*{Partager une ressource}
-\addcontentsline{toc}{section}{Partager une ressource} 
+\section{Partager une ressource}
+%\addcontentsline{toc}{section}{Partager une ressource} 
 
 Ressource = élément unique
 
-\subsection*{Partage simple}
-\addcontentsline{toc}{subsection}{Partage simple}
+\subsection{Partage simple}
+%\addcontentsline{toc}{subsection}{Partage simple}
 
 \begin{itemize}
     \item Vers un utilisateur
@@ -99,7 +120,7 @@ Ressource = élément unique
     \item Vers le public 
 \end{itemize}
 
-\subsection*{Les options de partage avancées}
-\addcontentsline{toc}{subsection}{Les options du partage}
+\subsection{Les options de partage avancées}
+%\addcontentsline{toc}{subsection}{Les options du partage}
 
 bla lbla
