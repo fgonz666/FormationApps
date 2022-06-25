@@ -7,7 +7,10 @@ Le ``Nuage'' est le nom qui a été donné à l'espace de stockage en ligne, act
 } 
 offrant en outre la présence d'une suite bureautique en ligne --libreoffice en ligne ou lool-- et d'éditeurs avancés de texte enrichi.
 
-Le nuage est accessible de deux façons différentes pour l'instant --j'espère que la troisième fonctionnera aussi bientôt--~: \emph{via} l'interface web (firefox, chrome, edge, autres ...) et \emph{via} le client \emph{nextcloud}.
+Le nuage est accessible de deux façons différentes pour l'instant --j'espère que la troisième fonctionnera aussi bientôt--~: \emph{via} l'interface web (firefox, chrome, edge, autres ...) ou \emph{via} le client \emph{nextcloud}.
+
+Même si les avis divergent entre \emph{bloggers\/} au sein du vaste monde d'internet, il y a un adage que beaucoup partagent~: \og~\emph{There is no cloud : it's just someone else's computer.\/}\footnote{Il n'y a pas de Nuage : c'est seulement l'ordinateur de quelqu'un d'autre.}~\fg{}. 
+En effet malgré que peut apporter un \emph{data center\/} ou un \emph{cluster} de telles structures en terme de répartition, si la société qui gère tout ce stockage distant décide de fermer le service, vous n'y aurez plus accès.
 
 \section{L'interface Web}
 %\addcontentsline{toc}{section}{L'interface web}
@@ -59,6 +62,9 @@ Lors de son installation, le client va demander un dossier, soit par défaut, so
 	\caption{Le dossier synchronisé sur mon P.C.}
 \end{figure}
 
+\paragraph{Notez.} 
+Les prochaines sections et sous-sections traiteront de l'outil qui sera le plus souvent utilisé à savoir le transfert et la création d'objets par l'interface web, il restera
+
 \section{Transfert de données}
 %\addcontentsline{toc}{section}{Transfert de données}
 Le transfert de fichiers et de dossiers entre périphériques est possible depuis plusieurs sources et selon plusieurs protocoles. 
@@ -80,7 +86,7 @@ De plus j'utiliserai le terme ``monter'' en lieu et place de l'anglicisme \emph{
 Tout se passe par l'icône en forme de rond avec une croix à l'intérieur, le {\Large $\oplus$} à gauche de la barre horizontale au dessus de l'espace réservé pour afficher les fichier. L'appui sur l'icône affiche le menu de la capture suivante~:
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7071\linewidth]{./Captures/nuage.menu.plus.png}
+	\includegraphics[width=0.5000\linewidth]{./Captures/nuage.menu.plus.png}
 	\caption{Le menu ``plus''}
 \end{figure}
 En cliquant sur la ligne \og~Envoyer un fichier~\fg{} une fenêtre de l'explorateur local va s'ouvrir permettant de sélectionner un ou plusieurs fichiers qui seront envoyés dans le dossier affiché à l'écran.
@@ -90,7 +96,7 @@ En cliquant sur la ligne \og~Envoyer un fichier~\fg{} une fenêtre de l'explorat
 En cliquant sur la deuxième ligne du menu déroulant, c'est la création d'un dossier dans le dossier courant, attention il faut penser à clique sur la flèche au bout de la ligne pour valider le nom et créer le dossier.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7071\linewidth]{./Captures/nuage.menu.plus.creer.dossier.png}
+	\includegraphics[width=0.5000\linewidth]{./Captures/nuage.menu.plus.creer.dossier.png}
 	\caption{}
 \end{figure}
 
@@ -98,13 +104,27 @@ Afin de valider la création d'un dossier, il suffit de saisir son nom et de val
 
 \subsection{Descendre un dossier ou plusieurs fichiers}
 %\addcontentsline{toc}{subsection}{Descendre un dossier ou plusieurs fichiers}
+L'un des avantages du nuage intégré à Apps.Education est la possibilité d'ouvrir, certes, mais aussi de télécharger ensuite un ou plusieurs fichiers, ou bien un ou plusieurs dossiers.
 
-bla lbla
+\begin{figure}
+	\centering
+	\includegraphics{./Captures/nuage.accueil.menu.contextuel.png}
+	\caption{}
+\end{figure}
+Lorsqu'on appuie sur les \ldots un menu contextuel montre les différents choix proposés pour cet objet --ici un fichier un texte balisé en langage \texttt{Markdown}-- 
 
-\subsection{Ce qu'il n'est pas possible de faire}
+\subsection{Ce qui est spécifique au programme Nextcloud}
 %\addcontentsline{toc}{subsection}{Ce qu'il n'est pas possible de faire} 
+Par défaut, l'interface web du nuage ne permet pas d'envoyer directement un dossier, son contenu et toute la hiérarchie fille qui en découle, mais, cela reste possible par l'utilisation du client Nextcloud vu précédemment. 
 
-bla lbla
+Ouvrez deux fenêtres, l'une pointant le dossier synchronisé par le client Nextcloud, l'autre montrant la source des données à transférer, et, comme vous le feriez d'un dossier vers un dispositif externe, copiez ou déplacez les objets choisis (mélangeant tout ce que vous voulez de dossiers et de fichiers), quelques instants plus tard la synchronisation s'effectuera et créera dans le nuage les dossiers, les sous-dossiers et y placeront tous les fichiers quelque soit leur position dans l'arborescence.
+
+Parmi les choix proposés, on peut renommer le fichier, le copier ou le déplacer --c'est la même fenêtre mais pas le même bouton sur lequel cliquer-- ou encore télécharger la ressource.
+
+La règle est simple, si la ressource est un fichier simple, le fichier est téléchargé tel quel si par contre cela correspond à la sélection de plusieurs objets ou au moins d'un dossier, alors le nuage va compresser le tout dans une ressource unique, un fichier \emph{.zip} et c'est cet élément qui sera téléchargé.
+
+\paragraph{Notez aussi.} 
+On peut sélectionner un ou plusieurs objets en cliquant sur la case $\square$ en début de ligne, faisant apparaître en haut, à droite de \og~Nom~$\triangledown$~\fg{},
 
 \section{Partager une ressource}
 %\addcontentsline{toc}{section}{Partager une ressource} 
@@ -132,3 +152,4 @@ bla bla
 \section{Libreoffice \emph{online}}
 
 Au sein du nuage, \emph{LibreOffice OnLine\/} ou encore LOOL a été intégrée, toujours dans le menu $\oplus$ et offre le traitement de textes \emph{writer\/}, le tableur \emph{calc\/} et le logiciel de présentation \emph{impress\/}, permettant d'ouvrir les document montés sur le nuage mais aussi d'éditer ceux déjà présents.
+

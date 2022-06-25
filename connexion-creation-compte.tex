@@ -96,17 +96,25 @@ C'est dans cet onglet que pourra être changé le mot de passe d'accès à tous 
 \end{figure}
 
 \subsection{Modification du mode d'authentification}
+Par défaut, l'utilisation seule du mot de passe et de l'identifiant sont les deux informations pour assurer la sécurité de l'accès au compte utilisateur, mais il existe une méthode supplémentaire d'authentification par l'emploi de la méthode du \emph{One Time Password\/} ou OTP en installant sur \emph{smartphone} par exemple une application comme par exemple FreeOTP.
 \begin{figure}
 	\centering
 	\includegraphics{./Captures/keycloack.profil.authentification.haut.png}
 	\caption{Modification avancée du profil, paramètre de }
 \end{figure}
-
+Une telle application demande soit manuellement de saisir certaines informations relatives au secret partagé et à la méthode permettant de générer par la suite les mots de passe, soit plus simplement de flasher un QR-Code tel que l'affiche l'image qui suit.
 \begin{figure}
 	\centering
 	\includegraphics{./Captures/keycloack.profil.authentification.bas.png}
 	\caption{Modification avancée du profil, paramètre de }
 \end{figure}
+Lors d'une connexion ultérieurs et après sauvegarde des paramètres par la saisie de la réponse dans la ligne adéquate, la figure suivante apparaîtra.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.500\linewidth]{./Captures/portail.otp.png}
+	\caption{La sur-sécurité par OTP}
+\end{figure}
+\paragraph*{Petit conseil.} Ne perdez pas votre périphérique, voir, ce qui est possible sur FreeOTP+, partagez ce même QR-Code sur un deuxième dispositif (tablette, ...) pour le cas échéant si l'un des dispositifs vient à ne plus être disponible, pouvoir accéder au compte pour désactiver cette fonctionnalité.
 
 \subsection{Modification et ajout d'identités en fédération}
 \begin{figure}
@@ -115,18 +123,26 @@ C'est dans cet onglet que pourra être changé le mot de passe d'accès à tous 
 	\caption{Modification avancée du profil, paramètre de }
 \end{figure}
 
+Passé ces premiers onglets où des informations sont altérables, les suivants ne sont plus qu'informatifs.
+
+\subsection{Accès aux sessions}
+Par cet onglet vous accéderez à l'information des sessions actuellement actives. 
+Ici il n'y en a qu'une puisque seul un ordinateur avec une session est branché sur Apps.Education.
 \begin{figure}
 	\centering
 	\includegraphics{./Captures/keycloack.profil.sessions.png}
-	\caption{Modification avancée du profil, paramètre de }
+	\caption{Les sessions en cours.}
 \end{figure}
 
+\subsection{Méthodes d'accès des applications.}
+L'onglet suivant sert quant à lui à montrer les méthodes d'accès utilisées par les applications déjà utilisées ou en cours d'usage permettant aussi d'avoir un panoramique des accès qu'elles emploient pour communiquer avec les bases de données internes au projet (à vérifier).
 \begin{figure}
 	\centering
 	\includegraphics{./Captures/keycloack.profil.applications.png}
 	\caption{Modification avancée du profil, paramètre de }
 \end{figure}
 
+\subsection{Les logs !}
 \begin{figure}
 	\centering
 	\includegraphics{./Captures/keycloack.profil.connexions.log.png}
