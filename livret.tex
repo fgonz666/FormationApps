@@ -1,40 +1,91 @@
-\documentclass[a4paper, 11pt]{book}
+%% Définition du type de document : ce sera un livre, sur du papier A4, taille de la police par défaut 12 pts
+\documentclass[a4paper, 12pt]{book}
+
+%% Les polices de caractères obéissent à la norme T1
 \usepackage[T1]{fontenc}
+
+%% Les caractères saisis dans le code source le sont sur un système UTF-8, cela permet le support de caractères spécifiques naturellement tels que le œ par exemple.
 \usepackage[utf8]{inputenc}
+
+%% La langue française est la langue du document
 \usepackage[french]{babel}
+
+%% Ceci définira les marges finales du document, pour l'heure c'est le réglage par défaut qui est employé
+%\usepackage[inner=25mm, outer=20mm, top=20mm, bottom=20mm]{geometry}
+
+%% Inclusion des 3 paquets pour la gestion des symboles et expressions mathématiques
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage[]{lmodern}
+
+%% La police par défaut est palatino
+\usepackage[]{palatino}
+
+%% Le support de l'inclusion d'images externes et demandé
 \usepackage[]{graphicx}
+%% On définit la largeur par défaut des images "width" en prenant la largeur entière de la ligne "\linewidth"
     \setkeys{Gin}{width=\linewidth}
+%% Définition du dossier par défaut des images
     \graphicspath{./Captures}
+
+%% On veut pouvoir forcer le placement d'objets : tableaux, images ...
 \usepackage[]{float}
+%% Définition par défaut des placement des figures et des tableaux, H = à l'endroit où le code l'indique
     \floatplacement{figure}{H}
     \floatplacement{table}{H}
+
+%% Inclusion de la gestion des couleurs étendue (xcolor), y compris dans les tableaux (table)
 \usepackage[table]{xcolor}
+%% Définition de l'alternance des lignes colorées dans un tableau : depuis la ligne 1, un gris léger puis du blanc
 	\rowcolors{1}{white!95!black}{white}
+
+%% Inclusion de la gestion des colonnes dans le document.
 \usepackage{multicol}
+%% Définition de la largeur du trait de séparation des colonnes : 1 point
+	\renewcommand{\columnseprule}{1pt}
+%% Définition de la couleur du trait de séparation : bleu
+	\def\columnseprulecolor{blue}
+
+%% Ativation de la gestion des liens, le pdf obtenu aura des liens actifs
 \usepackage[]{hyperref}
+%% Activation de la coloration des liens, les couleurs sont définies suivant le type de lien (interne, externe...)
     \hypersetup{
         colorlinks=true,
         linkcolor=blue,
         urlcolor=blue!50!purple,
     }
+%% Définition du style de lien, la police choisie sera la même que celle du document.
     \urlstyle{same}
+
+%% Activation de la gestion fine des tableaux
 \usepackage[]{array}
 %\usepackage[margin=35mm]{geometry}
+
+%% Activation de la gestion des veuves et orphelines, 3 lignes minimum avant de sauter une ligne
 \usepackage[all, defaultlines=3]{nowidow}
+
+%% Activation des chapitres plus jolis, le style Sonny est choisi
 \usepackage[Sonny]{fncychap}
-\title{Apps.Education\\Manuel de Références}
+
+%% Définition du titre de l'œuvre, de l'auteur et des informations de date.
+\title{Apps.Education\\Un manuel de référence}
 \author{F.S.G.}
 \date{Compilation du \today{}.}
+
+%% Modification de l'interligne : 125%
 \renewcommand{\baselinestretch}{1.25}
+%% Modification de l'espace entre pararagraphes : une demi emphase
 \setlength{\parskip}{0.5em}
+
+%% Début du document principal
 \begin{document}
+
+%% Page de titre avec affichage des informations par \maketitle
 \begin{titlepage}
     \maketitle
 \end{titlepage}
+
+%% haque mention \include insère un document (sans extention .tex) comme un nouveau chapitre, l'ordre des lignes donne l'ordre des chapitres
 
 \include{introduction}
 
@@ -59,11 +110,13 @@
 %
 %\include{f01-envoyer-fichier}
 %
+%% Nouvelle page forcée, définition des nouveaux interlignes et espacements interpargraphes afin d'économiser de l'espace à la fin du document
 \newpage
 \renewcommand{\baselinestretch}{1}
 \setlength{\parskip}{0em}
+%% Insertion de la table du contenu, compiler 2 fois le document pour être sûr(e) que les liens sont bien mis à jour
 \tableofcontents
-
+%% Insertion de la table des figures avec un commentaire associén, , compiler 2 fois le document pour être sûr(e) que les numérotation des figures sont bien mises à jour
 \listoffigures
 
 \end{document}
